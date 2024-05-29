@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Created by Ackee-qo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Практична 6</h1>
+
+    <!-- Функція №1: Кольори фону -->
+    <section>
+        <h2>Кольори фону</h2>
+        <select id="colorSelect">
+            <option value="red">Червоний</option>
+            <option value="yellow">Жовтий</option>
+            <option value="gray">Сірий</option>
+        </select>
+    </section>
+
+    <!-- Функція №2: Тестування логічного елемента -->
+    <section>
+        <h2>Тестування логічного елемента</h2>
+        <p>Виберіть вірні результати для функції "Виключає АБО НЕ":</p>
+        <table>
+            <tr>
+                <th>A</th>
+                <th>B</th>
+                <th>A XOR NOT B</th>
+                <th>Результат</th>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>0</td>
+                <td><button class="xor-button" onclick="checkXOR(0, 0)">?</button></td>
+                <td id="result-0-0"></td>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>1</td>
+                <td><button class="xor-button" onclick="checkXOR(0, 1)">?</button></td>
+                <td id="result-0-1"></td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>0</td>
+                <td><button class="xor-button" onclick="checkXOR(1, 0)">?</button></td>
+                <td id="result-1-0"></td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>1</td>
+                <td><button class="xor-button" onclick="checkXOR(1, 1)">?</button></td>
+                <td id="result-1-1"></td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- Функція №3: Тест "Хто сказав Мяу?" -->
+    <section>
+        <h2>Хто сказав "Мяу"?</h2>
+        <p>Виберіть вірну відповідь:</p>
+        <form id="quizForm">
+            <label>
+                <input type="radio" name="answer" value="dog"> Собака
+            </label><br>
+            <label>
+                <input type="radio" name="answer" value="cat"> Кішка
+            </label><br>
+            <label>
+                <input type="radio" name="answer" value="cow"> Корова
+            </label><br>
+            <button type="button" onclick="checkQuiz()">Перевірити</button>
+        </form>
+        <p id="quizResult"></p>
+    </section>
+
+    <!-- Функція №4: Форма реєстрації -->
+    <section>
+        <h2>Форма реєстрації</h2>
+        <form id="registrationForm">
+            <label for="username">Ім'я користувача:</label>
+            <input type="text" id="username" name="username"><br>
+
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password"><br>
+
+            <label for="email">Електронна пошта:</label>
+            <input type="email" id="email" name="email"><br>
+
+            <label for="fullname">Повне ім'я:</label>
+            <input type="text" id="fullname" name="fullname"><br>
+
+            <label for="dob">Дата народження:</label>
+            <input type="date" id="dob" name="dob"><br>
+
+            <button type="button" onclick="registerUser()">Зареєструватися</button>
+        </form>
+        <p id="registrationResult"></p>
+    </section>
+
+    <!-- Функція №5: Обчислення суми двох чисел -->
+    <section>
+        <h2>Обчислення суми двох чисел</h2>
+        <form id="sumForm">
+            <label for="num1">Число 1:</label>
+            <input type="number" id="num1" name="num1"><br>
+
+            <label for="num2">Число 2:</label>
+            <input type="number" id="num2" name="num2"><br>
+
+            <button type="button" onclick="calculateSum()">Обчислити</button>
+        </form>
+        <p id="sumResult"></p>
+    </section>
+
+    <!-- Функція №6: Відправлення e-mail -->
+    <section>
+        <h2>Відправлення e-mail</h2>
+        <form action="mailto:example@example.com" method="post" enctype="text/plain">
+            <label for="emailAddress">Ваш e-mail:</label>
+            <input type="email" id="emailAddress" name="email"><br>
+
+            <label for="message">Повідомлення:</label><br>
+            <textarea id="message" name="message" rows="4" cols="50"></textarea><br>
+
+            <button type="submit">Відправити</button>
+        </form>
+    </section>
+
+    <script src="main.js"></script>
+</body>
+</html>
